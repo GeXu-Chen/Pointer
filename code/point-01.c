@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 void swap(int* x,int* y);
+int* method();
 
 int main()
 {
@@ -17,6 +18,8 @@ int b=20;
 printf("%d %d\n",a,b);
 swap(&a,&b);
 printf("%d %d",a,b);
+int* p=method();
+printf("%d",*p);
 return 0;
 }
 
@@ -27,5 +30,11 @@ void swap(int* x,int* y)
     temp=*x;
     *x=*y;
     *y=temp;
+}
+
+int* method()
+{
+    static int a=10;  //加了static使得这个参数a能一直保留到所有程序结束，不然在主函数里当调用完method()这个函数后函数里所有内容将消失使得无法printf出来
+    return &a;
 }
 
