@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++: MSVC Debug (active file)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${fileDirname}/build/Debug/outDebug.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "console": "externalConsole",
+      "preLaunchTask": "Build C with MSVC"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "cwd": "c:/Users/29640/Desktop/point/code",
+      "program": "c:/Users/29640/Desktop/point/code/build/Debug/outDebug",
+      "preLaunchTask": "Build C with MSVC"
+    }
+  ]
+}
