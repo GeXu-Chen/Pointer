@@ -54,3 +54,5 @@ int main()
     printf("%d\n",*(p+1));
     return 0;
 }
+
+//sizeof(arr)时arr还代表整个数组而不是代表首地址   |  &arr退化为指向首地址但步长变成整个数组的长度 &arr+1不再是arr[1]了
