@@ -1,4 +1,4 @@
-//malloc    申请连续空间
+//malloc    申请连续空间                       只有存储了数据才会真正分配空间
 //calloc    申请空间+数据初始化
 //reallo    修改空间大小
 //free      释放空间
@@ -16,7 +16,7 @@ int main()
         //printf("%d\n",p[i]);
     }
 
-    int* pp = realloc(p,20 * sizeof(int));       //remalloc建立了一个新空间且前面的内容与旧空间内内容一致
+    int* pp = realloc(p,20 * sizeof(int));       //remalloc建立了一个空间，用了之后就不用释放原来那个空间了
     for (int n=10;n<20;n++)
     {
         pp[n]=(n+1)*10;
@@ -26,6 +26,9 @@ int main()
     {       
         printf("%d\n",pp[z]);
     }
+
+    //当申请的空间不用了就释放空间
+    free(pp);
 
     return 0;
 }
